@@ -1927,9 +1927,6 @@ textarea {
     font-size: 1rem;
     padding: 0 4rem;
   }
-}
-
-@media (max-width: 575px) {
   .about-section .min-he-100 .about-content .skills .skill-item {
     margin: 3px;
   }
@@ -1958,14 +1955,6 @@ textarea {
     padding: 5px 10px;
     font-size: 11px;
   }
-  .about-section .min-he-100 .home-text h2 {
-    font-size: 2rem;
-    font-size: inherit;
-    margin-bottom: 10px;
-  }
-  .about-section .min-he-100 .home-text h3 {
-    font-size: 14px;
-  }
   .skills-section {
     padding: 5rem 1rem;
   }
@@ -1978,9 +1967,6 @@ textarea {
   .skills-section .chart .bars span {
     font-size: 10px;
   }
-}
-
-@media (max-width: 480px) {
   .skills-section {
     padding: 5rem 2rem;
   }
@@ -1988,7 +1974,8 @@ textarea {
     font-size: 2.7rem;
   }
   .about-section .min-he-100 .home-text h3 {
-    font-size: 15px;
+    padding: 1rem;
+    font-size: 1rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
