@@ -1506,10 +1506,6 @@ textarea {
 
 @media (max-width: 600px) {
     // home
-    .about-section .min-he-100 .home-img {
-        flex: 0 0 80%;
-        max-width: 80%;
-    }
     .about-section .min-he-100 .home-text {
         flex: 0 0 95%;
         max-width: 95%;
@@ -1585,7 +1581,10 @@ textarea {
     .skills-section {
         padding: 5rem 2rem;
     }
+    .about-section .min-he-100 .home-text h2 {
+        font-size: 2.5rem
+    }
     .about-section .min-he-100 .home-text h3 {
-        font-size: 13px;
+        font-size: 15px;
     }
 }
