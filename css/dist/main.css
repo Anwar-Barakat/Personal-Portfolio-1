@@ -1012,7 +1012,7 @@ textarea {
 }
 .portfolio-popup .pp-inner .pp-content .pp-header .pp-thumbnail {
   margin: 1rem 0 3rem;
-  box-shadow: #eeeeef40 0px 50px 100px -20px, #dddddd4d 10px 10px 3px 0, #f5f5f559 0px 0px 0px 0px inset;
+  box-shadow: 3px 3px 3px 1px #ffffff24;
 }
 .portfolio-popup .pp-inner .pp-content .pp-header h3 {
   font-size: 1.6rem;
