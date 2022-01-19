@@ -315,18 +315,20 @@ $(function() {
             })
         })
         .add({
+            targets: ".header .nav-toggle",
+            opacity: [0, 1],
+            translateY: [100, 0],
+            delay: anime.stagger(300, {
+                from: "center"
+            })
+        })
+        .add({
             targets: ".about-section .min-he-100 .home-text .bar",
             opacity: [0, 1],
             translateY: [100, 0],
             delay: anime.stagger(50, {
                 from: "center"
             })
-        })
-        .add({
-            targets: ".header .nav-toggle",
-            opacity: [0, 1],
-            translateY: [100, 0],
-            delay: anime.stagger(100)
         })
         .add({
             targets: ".skills-section .chart",
