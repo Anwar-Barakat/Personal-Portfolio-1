@@ -773,7 +773,7 @@ textarea {
                 position: absolute;
                 top: 0;
                 left: 0;
-                transform: rotate(-91deg);
+                transform: rotate(-90deg);
                 circle {
                     fill: none;
                     stroke: #c8d6e5;
@@ -881,7 +881,7 @@ textarea {
 
 @keyframes anim1 {
     100% {
-        stroke-dashoffset: 165.2;
+        stroke-dashoffset: 170.2;
     }
 }
 
@@ -893,13 +893,13 @@ textarea {
 
 @keyframes anim3 {
     100% {
-        stroke-dashoffset: 141.6;
+        stroke-dashoffset: 160;
     }
 }
 
 @keyframes anim4 {
     100% {
-        stroke-dashoffset: 118;
+        stroke-dashoffset: 142;
     }
 }
 

@@ -985,8 +985,8 @@ textarea {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-transform: rotate(-91deg);
-          transform: rotate(-91deg);
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 .skills-section .flex .skill svg circle {
@@ -1127,13 +1127,13 @@ textarea {
 
 @-webkit-keyframes anim1 {
   100% {
-    stroke-dashoffset: 165.2;
+    stroke-dashoffset: 170.2;
   }
 }
 
 @keyframes anim1 {
   100% {
-    stroke-dashoffset: 165.2;
+    stroke-dashoffset: 170.2;
   }
 }
 
@@ -1151,25 +1151,25 @@ textarea {
 
 @-webkit-keyframes anim3 {
   100% {
-    stroke-dashoffset: 141.6;
+    stroke-dashoffset: 160;
   }
 }
 
 @keyframes anim3 {
   100% {
-    stroke-dashoffset: 141.6;
+    stroke-dashoffset: 160;
   }
 }
 
 @-webkit-keyframes anim4 {
   100% {
-    stroke-dashoffset: 118;
+    stroke-dashoffset: 142;
   }
 }
 
 @keyframes anim4 {
   100% {
-    stroke-dashoffset: 118;
+    stroke-dashoffset: 142;
   }
 }
 
