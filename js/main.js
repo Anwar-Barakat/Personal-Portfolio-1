@@ -281,62 +281,62 @@ $(function() {
         duration: 2000,
     });
 
-    t1.add({
-            targets: '.home-text p',
-            opacity: [0, 1],
-            translateX: [150, 0],
-        })
-        .add({
-            targets: ".home-text h2",
-            opacity: [0, .5],
-            translateX: [500, 0],
-            delay: anime.stagger(100)
-        })
-        .add({
-            targets: ".home-text h3",
-            opacity: [0, .5],
-            translateX: [500, 0],
-            delay: anime.stagger(100)
-        })
-        .add({
-            targets: ".home-text .btn",
-            opacity: [0, 1],
-            translateX: [300, 0],
-            delay: anime.stagger(50, {
-                from: "center"
-            })
-        })
-        .add({
-            targets: ".about-section .min-he-100 .home-img .img-box",
-            opacity: [0, 1],
-            translateY: [300, 0],
-            delay: anime.stagger(300, {
-                from: "center"
-            })
-        })
-        .add({
-            targets: ".header .nav-toggle",
-            opacity: [0, 1],
-            translateY: [100, 0],
-            delay: anime.stagger(300, {
-                from: "center"
-            })
-        })
-        .add({
-            targets: ".about-section .min-he-100 .home-text .bar",
-            opacity: [0, 1],
-            translateY: [100, 0],
-            delay: anime.stagger(50, {
-                from: "center"
-            })
-        })
-        .add({
-            targets: ".skills-section .chart",
-            opacity: [0, 1],
-            translateY: [200, 0],
-            delay: anime.stagger(50, {
-                from: "center"
-            })
-        })
+    // t1.add({
+    //         targets: '.home-text p',
+    //         opacity: [0, 1],
+    //         translateX: [150, 0],
+    //     })
+    //     .add({
+    //         targets: ".home-text h2",
+    //         opacity: [0, .5],
+    //         translateX: [500, 0],
+    //         delay: anime.stagger(100)
+    //     })
+    //     .add({
+    //         targets: ".home-text h3",
+    //         opacity: [0, .5],
+    //         translateX: [500, 0],
+    //         delay: anime.stagger(100)
+    //     })
+    //     .add({
+    //         targets: ".home-text .btn",
+    //         opacity: [0, 1],
+    //         translateX: [300, 0],
+    //         delay: anime.stagger(50, {
+    //             from: "center"
+    //         })
+    //     })
+    //     .add({
+    //         targets: ".about-section .min-he-100 .home-img .img-box",
+    //         opacity: [0, 1],
+    //         translateY: [300, 0],
+    //         delay: anime.stagger(300, {
+    //             from: "center"
+    //         })
+    //     })
+    //     .add({
+    //         targets: ".header .nav-toggle",
+    //         opacity: [0, 1],
+    //         translateY: [100, 0],
+    //         delay: anime.stagger(300, {
+    //             from: "center"
+    //         })
+    //     })
+    //     .add({
+    //         targets: ".about-section .min-he-100 .home-text .bar",
+    //         opacity: [0, 1],
+    //         translateY: [100, 0],
+    //         delay: anime.stagger(50, {
+    //             from: "center"
+    //         })
+    //     })
+    //     .add({
+    //         targets: ".skills-section .chart",
+    //         opacity: [0, 1],
+    //         translateY: [200, 0],
+    //         delay: anime.stagger(50, {
+    //             from: "center"
+    //         })
+    //     })
 
 });
