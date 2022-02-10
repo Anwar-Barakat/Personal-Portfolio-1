@@ -704,7 +704,7 @@ textarea {
   position: absolute;
   top: 0;
   left: 0;
-  transform: rotate(-91deg);
+  transform: rotate(-90deg);
 }
 .skills-section .flex .skill svg circle {
   fill: none;
@@ -809,7 +809,7 @@ textarea {
 
 @keyframes anim1 {
   100% {
-    stroke-dashoffset: 165.2;
+    stroke-dashoffset: 170.2;
   }
 }
 @keyframes anim2 {
@@ -819,12 +819,12 @@ textarea {
 }
 @keyframes anim3 {
   100% {
-    stroke-dashoffset: 141.6;
+    stroke-dashoffset: 160;
   }
 }
 @keyframes anim4 {
   100% {
-    stroke-dashoffset: 118;
+    stroke-dashoffset: 142;
   }
 }
 .portfolio-section {
@@ -841,8 +841,8 @@ textarea {
   font-size: 1em;
   border: none;
   border-radius: 5px;
-  background: rgba(225, 245, 245, 0.1);
-  box-shadow: 0 0px 3px 1px #ffffff33;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0px 4px 2px #ffffff33;
   color: var(--white-light);
   text-transform: capitalize;
   margin: 0 4px 10px;
@@ -1011,7 +1011,8 @@ textarea {
   top: -7px;
 }
 .portfolio-popup .pp-inner .pp-content .pp-header .pp-thumbnail {
-  padding: 25px 0;
+  margin: 1rem 0 3rem;
+  box-shadow: 3px 3px 3px 1px #ffffff24;
 }
 .portfolio-popup .pp-inner .pp-content .pp-header h3 {
   font-size: 1.6rem;
@@ -1271,7 +1272,7 @@ textarea {
   }
 
   .btn {
-    padding: 6px 16px;
+    padding: 10px 20px;
     font-size: 15px;
   }
 
@@ -1374,7 +1375,7 @@ textarea {
 
   .about-section .min-he-100 .home-text h2 {
     margin: 10px auto;
-    font-size: 3rem;
+    font-size: 7vw;
   }
 
   .about-section .min-he-100 .home-text h3 span {
