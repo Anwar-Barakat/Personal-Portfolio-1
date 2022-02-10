@@ -1,12 +1,10 @@
-"use strict";
-
 window.addEventListener('load', function() { // document.querySelector('.page-loader').classList.add('slide-out-right');
     // setTimeout(() => {
     //     document.querySelector('.page-loader').style.display = "none";
     // }, 10000)
-}); // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-// & Circle Skills : 
+});
 // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
 
 var numbers = document.querySelectorAll("#number");
 numbers.forEach(function(item) {
@@ -19,7 +17,8 @@ numbers.forEach(function(item) {
             item.innerHTML = counter + "%";
         }
     }, 25);
-}); // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+});
+// &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 // & Start Big Animation Effect : 
 // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
@@ -228,12 +227,12 @@ $(function() {
         translateX: [150, 0]
     }).add({
         targets: ".home-text h2",
-        opacity: [0, .5],
+        opacity: [0, 0.5],
         translateX: [500, 0],
         delay: anime.stagger(100)
     }).add({
         targets: ".home-text h3",
-        opacity: [0, .5],
+        opacity: [0, 0.5],
         translateX: [500, 0],
         delay: anime.stagger(100)
     }).add({
