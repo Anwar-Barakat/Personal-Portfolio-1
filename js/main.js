@@ -256,9 +256,7 @@ function changePortfolioItem(direction) {
 // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 document.addEventListener('click', (e) => {
-
     if (e.target.classList.contains('toggle-contact-form-btn')) {
-
         document.querySelector('.contact-form').classList.toggle('open');
         toggleBodyScrolling();
     }
@@ -271,10 +269,9 @@ document.addEventListener('click', (e) => {
 $(function() {
     $('.bar').each(function(key, bar) {
         $(this).animate({
-            'height': $(this).data("percentage") + "%"
+            'height': $(this).data("percentage")
         })
     }, 4000);
-
     $('.home-text h2,.home-text p').lettering();
     var t1 = anime.timeline({
         easing: "easeOutExpo",
@@ -336,5 +333,4 @@ $(function() {
                 from: "center"
             })
         })
-
 });

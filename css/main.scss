@@ -923,7 +923,7 @@ textarea {
             font-size: 1em;
             border: none;
             border-radius: 5px;
-            background: rgba(25, 255, 255, .1);
+            background: rgba(225, 245, 245, 0.1);
             box-shadow: 0 0px 3px 1px #ffffff33;
             color: var(--white-light);
             text-transform: capitalize;
@@ -1456,6 +1456,7 @@ textarea {
         }
     }
     .skills-section .chart .bars li .bar {
+        height: 0;
         width: 30px;
     }
     .skills-section .flex .skill {
