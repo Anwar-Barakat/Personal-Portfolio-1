@@ -1495,6 +1495,9 @@ textarea {
     .about-section .min-he-100 .home-text .bar {
         display: none;
     }
+    .about-section .image {
+        width: 55vw;
+    }
     .skills-section {
         padding: 5rem 4rem;
         .chart,
@@ -1544,9 +1547,6 @@ textarea {
     }
     .about-section .min-he-100 .home-text h3 {
         font-size: 1rem;
-    }
-    .about-section .image {
-        width: 55vw;
     }
 }
 

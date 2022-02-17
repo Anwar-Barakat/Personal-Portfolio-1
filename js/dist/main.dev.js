@@ -226,7 +226,11 @@ $(window).on('load', function () {
   t1.add({
     targets: ".about-section .home-img",
     opacity: [0, 1],
-    translateX: [1000, 0]
+    translateX: [500, 0]
+  }).add({
+    targets: "#home-image",
+    opacity: [0, 1],
+    translateX: [300, 0]
   }).add({
     targets: '.home-text p',
     opacity: [0, 1],
