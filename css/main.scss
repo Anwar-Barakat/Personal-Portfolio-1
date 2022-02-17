@@ -10,6 +10,10 @@
     --white-light: #c8c8c8;
 }
 
+.image {
+    display: none;
+}
+
 .text {
     position: relative;
     width: 100%;
@@ -115,21 +119,22 @@ section.active {
     min-height: 100vh;
 }
 
- ::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 5px;
 }
 
- ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: var(--dark);
 }
 
- ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: var(--main-color);
 }
 
 .align-item-ceter {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .justify-content-around {
@@ -435,31 +440,32 @@ textarea {
     .nav-toggle {
         height: 34px;
         width: 44px;
-        border: none;
         cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: transparent;
         position: relative;
         z-index: 101;
         margin-right: 15px;
         transition: all .3s ease-in .4s;
+        background: rgba(255, 255, 255, 0.1);
+        -webkit-box-shadow: 3px 3px 3px 1px #ffffff24;
+        box-shadow: 3px 3px 3px 1px #ffffff24;
         span {
             position: relative;
             width: 30px;
-            height: 2px;
+            height: 2.3px;
             display: inline-block;
-            background: var(--white);
+            background: var(--white-light);
             transition: all .4s ease;
             &::after,
             &::before {
                 content: '';
                 position: absolute;
-                height: inherit;
+                height: 2px;
                 width: 50%;
                 top: 0;
-                background: var(--white);
+                background: var(--white-light);
                 transition: all .3s ease-in-out;
             }
             &::before {
@@ -577,16 +583,16 @@ textarea {
 // About Section :
 // ===========================
 .about-section {
+    overflow: hidden;
     .min-he-100 {
         padding: 120px 15px;
-        .home-text,
-        .home-img {
-            flex: 0 0 50%;
-            max-width: 50%;
-            padding: 0 15px;
-        }
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 3rem;
         .home-text {
             position: relative;
+            margin-top: 7rem;
             .bar {
                 position: absolute;
                 height: 100%;
@@ -603,7 +609,7 @@ textarea {
                 margin: 0;
             }
             h2 {
-                font-size: 3vw;
+                font-size: 2.7vw;
                 font-weight: 600;
                 -webkit-text-stroke: 0.1vw #c5c5c5;
                 color: #252839;
@@ -629,7 +635,7 @@ textarea {
                 }
             }
             h3 {
-                font-size: 18px;
+                font-size: 15px;
                 color: gray;
                 font-weight: 500;
                 margin-bottom: 1rem;
@@ -661,24 +667,48 @@ textarea {
                 }
             }
         }
-        .home-img {
-            .img-box {
-                max-width: 400px;
-                height: 400px;
-                display: block;
-                margin: 0px auto;
-                border-radius: 38% 62% 28% 72% / 36% 34% 66% 64%;
-                box-shadow: -3px -3px 2px #4444444d, 5px 5px 5px rgba(0, 0, 0, .2), 15px 15px 15px rgba(0, 0, 0, .2);
-                padding: 13px;
-                animation: raduis 10s linear infinite;
+        .slider {
+            position: relative;
+            width: 15vw;
+            height: 15vw;
+            transform-style: preserve-3d;
+            animation: rotate 30s linear infinite;
+            span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transform-origin: center;
+                transform-style: preserve-3d;
+                transform: rotateY(calc(var(--i)*120deg)) translateZ(250px);
                 img {
+                    position: absolute;
                     width: 100%;
                     height: 100%;
-                    border-radius: 38% 62% 28% 72% / 36% 34% 66% 64%;
+                    top: 0;
+                    left: 0;
+                    border-radius: 10px;
+                    object-fit: cover;
+                    width: 100%;
                     background-repeat: no-repeat;
                     background-size: cover;
-                    animation: raduis 10s linear infinite;
+                    box-shadow: -3px -3px 2px #4444444d, 5px 5px 5px rgba(0, 0, 0, .2), 15px 15px 15px rgba(0, 0, 0, .2);
+                    padding: 10px;
+                    transition: 1s;
+                    cursor: pointer;
                 }
+                &:hover img {
+                    transform: translateY(-40px) scale(1.2);
+                }
+            }
+        }
+        @keyframes rotate {
+            0% {
+                transform: perspective(1000px) rotateY(0deg);
+            }
+            100% {
+                transform: perspective(1000px) rotateY(360deg);
             }
         }
     }
@@ -800,7 +830,7 @@ textarea {
     }
     .chart {
         height: 360px;
-        width: 700px;
+        width: 620px;
         display: flex;
         align-items: center;
         background: rgba(255, 255, 255, .1);
@@ -847,7 +877,7 @@ textarea {
                 height: 360px;
                 .bar {
                     display: block;
-                    background: linear-gradient( 272deg, #c8d6e5, transparent);
+                    background: linear-gradient(272deg, #c8d6e5, transparent);
                     width: 50px;
                     position: absolute;
                     bottom: 0;
@@ -1087,6 +1117,7 @@ textarea {
         transition: all .5s ease;
         transform: translateY(20%);
         .pp-content {
+            padding: 1rem;
             max-width: 860px;
             margin: 50px auto 60px;
             .pp-header {
@@ -1106,7 +1137,10 @@ textarea {
                 }
                 .pp-thumbnail {
                     margin: 1rem 0 3rem;
-                    box-shadow: 3px 3px 3px 1px #ffffff24;
+                    img {
+                        margin-top: 1rem;
+                        box-shadow: 3px 3px 3px 1px #ffffff24;
+                    }
                 }
                 h3 {
                     font-size: 1.6rem;
@@ -1375,9 +1409,6 @@ textarea {
         max-width: 1170px;
         width: 100%;
     }
-    .about-section .min-he-100 .home-img .img-box {
-        margin-right: 0;
-    }
 }
 
 @media(max-width:1200px) {
@@ -1385,10 +1416,6 @@ textarea {
     .container {
         max-width: 991px;
         width: 100%;
-    }
-    .about-section .min-he-100 .home-img .img-box {
-        width: 300px;
-        height: 300px;
     }
     .about-section .min-he-100 .home-text h3 {
         font-size: 13.4px;
@@ -1413,7 +1440,22 @@ textarea {
 
 @media(max-width:1070px) {
     // home : 
-    .about-section .min-he-100 .home-text .bar {
+    .about-section .image {
+        display: block;
+        border-radius: 10px;
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: -3px -3px 2px #4444444d, 5px 5px 5px rgba(0, 0, 0, .2), 15px 15px 15px rgba(0, 0, 0, .2);
+        padding: 10px;
+        transition: 1s;
+        cursor: pointer;
+        width: 30vw;
+        &:hover {
+            transform: translateY(-50px) scale(1.1) translateZ(80px);
+        }
+    }
+    .about-section .slider {
         display: none;
     }
 }
@@ -1448,7 +1490,11 @@ textarea {
     }
 }
 
-@media (max-width:820px) {
+@media(max-width:767px) {
+    // home : 
+    .about-section .min-he-100 .home-text .bar {
+        display: none;
+    }
     .skills-section {
         padding: 5rem 4rem;
         .chart,
@@ -1481,8 +1527,7 @@ textarea {
         flex-direction: column-reverse;
         justify-content: space-evenly;
     }
-    .about-section .min-he-100 .home-text,
-    .about-section .min-he-100 .home-img {
+    .about-section .min-he-100 .home-text {
         flex: 0 0 100%;
         max-width: 100%;
     }
@@ -1500,9 +1545,8 @@ textarea {
     .about-section .min-he-100 .home-text h3 {
         font-size: 1rem;
     }
-    .about-section .min-he-100 .home-img .img-box {
-        width: 100%;
-        height: 100%;
+    .about-section .image {
+        width: 55vw;
     }
 }
 
@@ -1522,12 +1566,10 @@ textarea {
         font-size: 1rem;
         padding: 0 4rem;
     }
-    .about-section .min-he-100 .about-content .skills .skill-item {
-        margin: 3px;
-    }
     .header .nav .nav-inner ul li a {
         font-size: 2.3rem;
     }
+    // portfolio : 
     .portfolio-popup .pp-inner .pp-content .pp-footer h3 {
         font-size: 1em;
         height: 42px;
@@ -1545,11 +1587,6 @@ textarea {
     }
     .contact-section .contact-content .contact-info-item p span {
         display: block;
-    }
-    // home :
-    .btn {
-        padding: 5px 10px;
-        font-size: 11px;
     }
     // skills :
     .skills-section {

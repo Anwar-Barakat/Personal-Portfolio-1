@@ -1,4 +1,4 @@
-window.addEventListener('load', () => {
+window.addEventListener('load', function() {
     // document.querySelector('.page-loader').classList.add('slide-out-right');
     // setTimeout(() => {
     //     document.querySelector('.page-loader').style.display = "none";
@@ -160,7 +160,7 @@ filterItems(document.querySelector('.portfolio-filter-btn.active'));
 // & Start Portfolio Item Details
 // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 let portfolioItemIndex;
-document.addEventListener('click', (e) => {
+document.addEventListener('click', function(e) {
 
     if (e.target.closest(".portfolio-item")) {
 
@@ -179,7 +179,7 @@ function togglePopup() {
     document.querySelector(".portfolio-popup").classList.toggle("open");
     toggleBodyScrolling();
 }
-document.querySelector(".pp-close-btn").addEventListener('click', () => {
+document.querySelector(".pp-close-btn").addEventListener('click', function() {
     togglePopup();
 });
 
@@ -220,10 +220,10 @@ function updateNextPrevItem() {
         document.querySelector('.pp-footer-right').classList.add('hidden');
     }
 }
-document.querySelector(".pp-prev-btn").addEventListener('click', () => {
+document.querySelector(".pp-prev-btn").addEventListener('click', function() {
     changePortfolioItem('prev');
 });
-document.querySelector(".pp-next-btn").addEventListener('click', () => {
+document.querySelector(".pp-next-btn").addEventListener('click', function() {
     changePortfolioItem('next');
 });
 
@@ -231,18 +231,18 @@ function changePortfolioItem(direction) {
     // console.log(direction);
     if (direction == 'prev') {
 
-        portfolioItemIndex--
+        portfolioItemIndex--;
     } else {
-        portfolioItemIndex++
+        portfolioItemIndex++;
     }
     document.querySelector('.pp-overlay').classList.add(direction);
-    setTimeout(() => {
+    setTimeout(function() {
 
         document.querySelector(".pp-inner").scrollTo(0, 0);
         portfolioItemDetails();
         updateNextPrevItem();
     }, 400);
-    setTimeout(() => {
+    setTimeout(function() {
 
         document.querySelector('.pp-overlay').classList.remove(direction);
     }, 1000);
@@ -255,7 +255,7 @@ function changePortfolioItem(direction) {
 // & Toggle Contact Form
 // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
-document.addEventListener('click', (e) => {
+document.addEventListener('click', function(e) {
     if (e.target.classList.contains('toggle-contact-form-btn')) {
         document.querySelector('.contact-form').classList.toggle('open');
         toggleBodyScrolling();
@@ -265,74 +265,52 @@ document.addEventListener('click', (e) => {
 // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 // & Animation Page : 
 // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-
 $(function() {
     $('.bar').each(function(key, bar) {
         $(this).animate({
             'height': $(this).data("percentage")
-        })
+        });
     }, 4000);
-    $('.home-text h2,.home-text p').lettering();
+});
+
+
+$(window).on('load', function() {
     var t1 = anime.timeline({
         easing: "easeOutExpo",
-        duration: 2000,
+        duration: 1500,
     });
-
     t1.add({
+            targets: ".about-section .home-img",
+            opacity: [0, 1],
+            translateX: [1000, 0],
+        }).add({
             targets: '.home-text p',
             opacity: [0, 1],
             translateX: [150, 0],
         })
         .add({
             targets: ".home-text h2",
-            opacity: [0, .5],
-            translateX: [500, 0],
-            delay: anime.stagger(100)
+            opacity: [0, 0.5],
+            translateX: [300, 0],
         })
         .add({
             targets: ".home-text h3",
-            opacity: [0, .5],
-            translateX: [500, 0],
-            delay: anime.stagger(100)
+            opacity: [0, 1],
+            translateX: [300, 0],
         })
         .add({
             targets: ".home-text .btn",
             opacity: [0, 1],
             translateX: [300, 0],
-            delay: anime.stagger(50, {
-                from: "center"
-            })
         })
         .add({
-            targets: ".about-section .min-he-100 .home-img .img-box",
+            targets: ".home-text .bar",
             opacity: [0, 1],
             translateY: [300, 0],
-            delay: anime.stagger(300, {
-                from: "center"
-            })
         })
         .add({
-            targets: ".header .nav-toggle",
+            targets: ".nav-toggle",
             opacity: [0, 1],
-            translateY: [100, 0],
-            delay: anime.stagger(300, {
-                from: "center"
-            })
-        })
-        .add({
-            targets: ".about-section .min-he-100 .home-text .bar",
-            opacity: [0, 1],
-            translateY: [100, 0],
-            delay: anime.stagger(50, {
-                from: "center"
-            })
-        })
-        .add({
-            targets: ".skills-section .chart",
-            opacity: [0, 1],
-            translateY: [200, 0],
-            delay: anime.stagger(50, {
-                from: "center"
-            })
-        })
+            translateX: [-300, 0],
+        });
 });
