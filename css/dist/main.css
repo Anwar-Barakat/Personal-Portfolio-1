@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700&display=swap");
 :root {
-  --main-color: #c8d6e5;
+  --change-color: #c1cedb;
+  --main-color: #c1cedb;
   --dark: #131314;
   --dark-light: #32323a;
   --white: #ffffff;
@@ -21,7 +22,7 @@
   font-size: 3rem;
   margin-bottom: 2rem;
   position: relative;
-  color: var(--main-color);
+  color: var(--change-color);
   font-weight: bold;
   text-shadow: 0 0 10px var(--main-color);
   -webkit-box-reflect: below -30px linear-gradient(transparent, transparent, #0a0a0a66);
@@ -334,6 +335,115 @@ textarea {
   opacity: 0;
 }
 
+.style-switcher {
+  width: 190px;
+  position: fixed;
+  top: 6rem;
+  right: 0;
+  padding: 15px;
+  z-index: 150;
+  border-radius: 6px;
+  background: #2b2b2c;
+  box-shadow: 3px 3px 3px 1px #ffffff24;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(100%);
+}
+
+.style-switcher.open {
+  transform: translateX(-15px);
+}
+
+.style-switcher .s-icon {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  margin-right: 15px;
+  right: 100%;
+  line-height: 40px;
+}
+
+.style-switcher .s-icon::after {
+  border-radius: 50%;
+}
+
+.style-switcher .style-switcher-toggler {
+  top: 0;
+}
+
+.style-switcher .day-night {
+  top: 55px;
+}
+
+.style-switcher h4 {
+  margin: 0 0 10px;
+  color: #777;
+  font-style: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.style-switcher .colors {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.style-switcher .colors li {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 1px 7px;
+}
+.style-switcher .colors li:nth-child(1) {
+  background-color: var(--main-color);
+}
+.style-switcher .colors li:nth-child(2) {
+  background-color: #1abc9c;
+}
+.style-switcher .colors li:nth-child(3) {
+  background-color: #a18cd1;
+}
+.style-switcher .colors li:nth-child(4) {
+  background-color: #5fa7ff;
+}
+.style-switcher .colors li:nth-child(5) {
+  background-color: #ff9991;
+}
+
+.btn.style-switcher-toggler {
+  padding: 0;
+}
+.btn.style-switcher-toggler i {
+  color: var(--main-color);
+}
+
+[data-color=blue] {
+  background-color: #2ca1ef !important;
+}
+
+[data-color=red] {
+  background-color: #d4263e !important;
+}
+
+[data-color=green] {
+  background-color: #38d426 !important;
+}
+
+[data-color=purple] {
+  background-color: #c042f5 !important;
+}
+
+[data-color=pink] {
+  background-color: #f52de6 !important;
+}
+
 .overlay-effect {
   position: fixed;
   left: 0;
@@ -417,7 +527,7 @@ textarea {
   width: 30px;
   height: 2.3px;
   display: inline-block;
-  background: var(--white-light);
+  background: var(--main-color);
   transition: all 0.4s ease;
 }
 .header .nav-toggle span::after, .header .nav-toggle span::before {
@@ -426,7 +536,7 @@ textarea {
   height: 2px;
   width: 50%;
   top: 0;
-  background: var(--white-light);
+  background: var(--main-color);
   transition: all 0.3s ease-in-out;
 }
 .header .nav-toggle span::before {
@@ -493,7 +603,7 @@ textarea {
   transition: all 0.3s ease;
 }
 .header .nav .nav-inner ul li a:hover {
-  color: var(--main-color);
+  color: var(--change-color);
 }
 .header .nav .nav-inner ul li a:before {
   position: absolute;
@@ -550,7 +660,7 @@ textarea {
   background: white;
   left: -2rem;
   z-index: -2;
-  box-shadow: 0 0 5px var(--main-color), 0 0 6px var(--main-color), 0 0 7px var(--main-color), 0 0 8px var(--main-color), 0 0 10px var(--main-color), 0 0 15px var(--main-color);
+  box-shadow: 0 0 5px var(--change-color), 0 0 6px var(--change-color), 0 0 7px var(--change-color), 0 0 8px var(--change-color), 0 0 10px var(--change-color), 0 0 15px var(--change-color), 0 0 35px var(--change-color), 0 0 60px var(--change-color), 0 0 120px var(--change-color);
 }
 .about-section .min-he-100 .home-text p {
   color: #444;
@@ -561,7 +671,7 @@ textarea {
   font-size: 2.7vw;
   font-weight: 600;
   -webkit-text-stroke: 0.1vw #c5c5c5;
-  color: #252839;
+  color: var(--change-color);
   width: max-content;
   margin: 0;
   position: relative;
@@ -594,7 +704,7 @@ textarea {
   text-transform: capitalize;
 }
 .about-section .min-he-100 .home-text h3 a {
-  color: var(--main-color);
+  color: var(--change-color);
   text-transform: capitalize;
   font-weight: 600;
   position: relative;

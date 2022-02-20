@@ -1,9 +1,25 @@
-window.addEventListener('load', function() {
-    // document.querySelector('.page-loader').classList.add('slide-out-right');
-    // setTimeout(() => {
-    //     document.querySelector('.page-loader').style.display = "none";
-    // }, 10000)
+// &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+// & Switcher Color : 
+// &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+const switcher = document.querySelector('.style-switcher-toggler');
+switcher.addEventListener('click', () => {
+    document.querySelector('.style-switcher').classList.toggle('open');
 });
+var colors = document.getElementsByClassName('change-color');
+for (i = 0; i < colors.length; i++) {
+    colors[i].addEventListener('click', changeColor);
+}
+
+function changeColor() {
+    var color = this.getAttribute('data-color');
+    document.documentElement.style.setProperty('--change-color', color);
+    // let secondColor = this.getAttribute('data-second');
+    // document.documentElement.style.setProperty('--second-color', secondColor);
+}
+// &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+// & Switcher Color : 
+// &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
 // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 // & Circle Skills : 
 // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
